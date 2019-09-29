@@ -43,6 +43,6 @@ Roadmap (a.k.a. to-do / wishlist)
 * simple graphical interface
 * support for 4th edition character creation rules
 * automated creation of character sheets in pdf form
-* move to Python 3
+* ~move to Python 3~ Done
 
 
