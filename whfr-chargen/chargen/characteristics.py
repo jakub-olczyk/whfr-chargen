@@ -150,10 +150,10 @@ class Characteristics:
         return values[race][d10result]
 
     def calc_strength_bonus(self,sb_val):
-        return sb_val / 10
+        return sb_val // 10
 
     def calc_toughness(self, t_val):
-        return t_val / 10
+        return t_val // 10
 
     def generate(self, race):
         import copy
