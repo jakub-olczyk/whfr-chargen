@@ -24,8 +24,10 @@ class Generator:
         else:
             self.sex = sex
 
-        # XXX rather 'dirty hack' for getting the right module now. I guess
+        # FIXME
+        # rather 'dirty hack' for getting the right module now. I guess
         # when something seems stupid but does its job it's not stupid
+
         self.race_lib = globals()[self.race].__dict__[self.race.title()]()
         self.race_sec_lib = globals()['human'].__dict__["Human"]()
 
@@ -48,13 +50,13 @@ class Generator:
         """Return generated character as namedtuple object"""
         character = namedtuple('Character', ['name', 'surname', 'sex',
             'species', 'career', 'char_dict', 'characteristics', 'talents'])
-        c = namedtuple('Characteristics', characteristics.ORDER +
-                characteristics.ORDER2)
+        c = namedtuple('Characteristics', characteristics.FIRST_ROW +
+                characteristics.SECOND_ROW)
         t = namedtuple('Talents', ['list'])
 
         return character(name=self.name, surname=self.surname, sex=self.sex,
                 species=self.race, career=self.career, char_dict=self.chars,
                 characteristics=c(*list(self.chars[k] for k in
-                    characteristics.ORDER + characteristics.ORDER2)),
+                    characteristics.FIRST_ROW + characteristics.SECOND_ROW)),
                 talents=t(self.talents))
 

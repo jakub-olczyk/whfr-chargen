@@ -47,6 +47,5 @@ class Physique:
             if random.randint(0,100) < 30:
                 additional = random.choice(self.birth_place['human']) + " " + random.choice(self.birth_human)
                 return additional
-
         return place + additional
 

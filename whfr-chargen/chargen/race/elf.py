@@ -50,14 +50,6 @@ class Elf:
                                airdh edh and heid uibh lain tain bain
                                bhain'''.split()
 
-        random.shuffle(self.name_element)
-        random.shuffle(self.name_element_middle)
-        random.shuffle(self.name_element_male)
-        random.shuffle(self.name_element_female)
-        random.shuffle(self.surname_last)
-
-
-
     def ret_name(self, sex, middle=True):
         name = ""
         name += random.choice(self.name_element)

@@ -33,10 +33,6 @@ class Dwarf:
                                      skina skinella tina toka trekella trekina
                                      troka zina zora'''.split()
 
-        random.shuffle(self.name_element_1)
-        random.shuffle(self.name_suffix_male)
-        random.shuffle(self.name_suffix_female)
-
     def ret_name(self, sex):
         if sex == 'male':
             return random.choice(self.name_element_1) + random.choice(self.name_suffix_male)
